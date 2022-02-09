@@ -8,6 +8,7 @@ const previousOperand = document.querySelector('[data-previous-operand]');
 var n = operations;
 
 window.addEventListener('message',(e) => {
+    console.log('sending messagge')
     window.opener.postMessage('close','localhost:3000')
 })
 
