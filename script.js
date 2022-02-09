@@ -7,6 +7,10 @@ const currentOperand = document.querySelector('[data-current-operand]');
 const previousOperand = document.querySelector('[data-previous-operand]');
 var n = operations;
 
+window.addEventListener('message',(e) => {
+    window.opener.postMessage('close','localhost:3000')
+})
+
 function compute(){
     const last = parseFloat(previousOperand.innerText);
     const current = parseFloat(currentOperand.innerText);
