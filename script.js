@@ -7,10 +7,20 @@ const currentOperand = document.querySelector('[data-current-operand]');
 const previousOperand = document.querySelector('[data-previous-operand]');
 var n = operations;
 
-window.addEventListener('message',(e) => {
+window.onload = function () {
     console.log('sending messagge')
-    window.opener.postMessage('close','localhost:3000')
-})
+    if(window.opener){
+        console.log(window.opener)
+    }
+    // window.addEventListener('message', (e) => {
+    //     console.log(e.data)
+    //     // window.opener.postMessage('close', 'localhost:3000')
+    // })
+}
+// window.addEventListener('message',(e) => {
+//     console.log('sending messagge')
+//     window.opener.postMessage('close','localhost:3000')
+// })
 
 function compute(){
     const last = parseFloat(previousOperand.innerText);
