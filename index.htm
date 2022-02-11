@@ -78,12 +78,12 @@
       };
       input.addEventListener('change', handleValueChange);
       const handleAccept = () => {
-        window.opener.postMessage({ status: 'ACCEPTED', text: p }, 'http://localhost:3000');
+        window.opener.postMessage({ status: 'ACCEPTED', text: p });
         window.close();
       };
 
       const handleReject = () => {
-        window.opener.postMessage({ status: 'REJECTED' }, 'http://localhost:3000');
+        window.opener.postMessage({ status: 'REJECTED' });
         window.close();
       };
     </script>
